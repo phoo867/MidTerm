@@ -1,0 +1,159 @@
+:host {
+  display: block;
+  margin: 2em auto;
+  max-width: 600px;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  padding: 2em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+ul.creatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.creatures li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul.creatures a {
+  flex-grow: 1;
+  text-decoration: none;
+  color: #2c3e50;
+  display: block; /* Adjusted for flex */
+  padding: 1em;
+  transition: background-color 0.3s ease;
+}
+
+ul.creatures li:hover,
+ul.creatures li:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+ul.creatures a:hover,
+ul.creatures a:focus {
+  background-color: #eaeaea;
+}
+
+.creatures .badge {
+  background-color: #2d7523;
+  border: none;
+  border-radius: 50%; /* Makes it round */
+  cursor: pointer;
+  font-size: 0.5em; /* Adjusted font size to keep the badge small */
+  padding: 0.5em; /* Uniform padding to create a circle */
+  margin: 0.5em;
+  color: white; /* Ensures the text is readable on the dark background */
+  display: inline-block; /* Aligns with text properly */
+  width: 1em; /* Keeps the width consistent */
+  height: 1em; /* Keeps the height consistent */
+  text-align: center; /* Centers the text in the badge */
+  line-height: 1em; /* Adjusts line height to vertically center the text */
+  vertical-align: middle; /* Aligns badge with the surrounding text */
+}
+
+
+button.delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 18%;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 0.5em;
+  margin: 0.5em; /* Ensure some spacing */
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Form styling */
+div {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 2em;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 1em;
+  display: block;
+  color: #2c3e50;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styling for the Add Creature button */
+button.add-button {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin-top: 1em;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button.add-button:hover {
+  background-color: #2980b9;
+}
+
+/* Input focus state for better visibility */
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Enhancing accessibility and feedback */
+input:focus + label {
+  color: #3498db;
+}
+
+
+@media (max-width: 768px) {
+  :host {
+    margin: 1em;
+    max-width: 100%;
+    padding: 1em;
+  }
+
+  ul.creatures li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button.delete {
+    margin-top: 0.5em;
+    align-self: flex-end; /* Align delete button to the end on smaller screens */
+  }
+}

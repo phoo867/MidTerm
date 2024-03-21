@@ -1,0 +1,35 @@
+
+h2 {
+    text-align: center;
+    color: #2c3e50; /* Dark shade for contrast */
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 1.5rem; /* Adds some space below the heading */
+  }
+  
+  .creatures-menu {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    padding: 0;
+    list-style: none; /* Removes bullet points if .creatures-menu is a <ul> */
+    margin: 0; /* Remove default margin if .creatures-menu is a <ul> */
+  }
+  
+  .creatures-menu a {
+    background-color: #3498db; /* A nice blue */
+    color: white;
+    padding: 15px 20px;
+    margin: 5px 5px; /* Adds a little space between links */
+    border-radius: 5px;
+    text-decoration: none; /* Removes underline from links */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  .creatures-menu a:hover, .creatures-menu a:focus {
+    background-color: #386e92; /* Darker shade of blue on hover/focus */
+    transform: translateY(-2px); /* Slight lift effect */
+    color: #fff;
+  }
+  

@@ -1,0 +1,19 @@
+<div *ngIf="creature" class="creature-details-card">
+
+    <h2>{{creature.name | uppercase}} Details</h2>
+    <div class="id-display"><span>ID: </span>{{creature._id}}</div>
+    <div>
+      <label for="creature-name">Creature name: </label>
+      <input id="creature-name" [(ngModel)]="creature.name" placeholder="name">
+    </div>
+    <div>
+        <label for="creature-description">Description: </label>
+        <input id="creature-description" [(ngModel)]="creature.description" placeholder="description">
+      </div>
+      <div>
+        <label for="creature-habitat">Habitat: </label>
+        <input id="creature-habitat" [(ngModel)]="creature.habitat" placeholder="habitat">
+      </div>
+      <button type="button" class="go-back-btn" (click)="goBack()">go back</button>
+      <button type="button" (click)="save()">save</button>
+  </div>

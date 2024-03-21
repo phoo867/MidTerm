@@ -1,0 +1,26 @@
+<h2>Mythical Creatures</h2>
+
+<div>
+  <label for="new-creature">Creature name: </label>
+  <input id="new-creature" #creatureName />
+  <label for="new-creature-description">Description: </label>
+  <input id="new-creature-description" #creatureDescription />
+  <label for="new-creature-habitat">Habitat: </label>
+  <input id="new-creature-habitat" #creatureHabitat />
+
+  <button type="button" class="add-button" (click)="add(creatureName.value, creatureDescription.value, creatureHabitat.value); creatureName.value=''; creatureDescription.value=''; creatureHabitat.value=''">
+    Add creature
+  </button>
+</div>
+
+
+<ul class="creatures">
+  <li *ngFor="let creature of creatures">
+    <a routerLink="/detail/{{creature._id}}">
+      <span class="badge"></span> {{creature.name}}
+    </a>
+    <button type="button" class="delete" title="delete creature"
+      (click)="delete(creature)">x</button>
+  </li>
+</ul>
+

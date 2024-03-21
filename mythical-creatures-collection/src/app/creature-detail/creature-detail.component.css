@@ -1,0 +1,96 @@
+/* Creature details card styling */
+.creature-details-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+
+:host {
+    display: block;
+    margin: 2em auto;
+    max-width: 600px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Use a consistent color scheme and alignment */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+
+/* Style the container for each input for consistent spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out;
+    margin-bottom: 1em;
+  }
+
+/* Enhance focus style to align with base */
+input:focus {
+    outline: none;
+    border-color: #3498db;
+  box-shadow: 0 0 3px #2980b9;
+  }
+
+/* Placeholder color */
+input::placeholder {
+    color: #bbb;
+}
+
+
+.go-back-btn {
+background-color: #3498db;
+color: white;
+padding: 0.75rem 1.5rem;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 1rem;
+transition: background-color 0.3s ease;
+display: block; 
+margin: 2rem auto 0; 
+width: fit-content; 
+}
+
+.go-back-btn:hover {
+background-color: #2980b9;
+}
+
+/* ID display styling */
+.id-display {
+    color: #333; 
+    padding: 0.5em 1em;
+    border-radius: 4px; 
+    display: inline-flex; 
+    margin: 1em 0;
+    margin-left: -0.8em;
+    font-weight: bold; 
+    
+  }
+  
+  /* Styling the 'id' span */
+  .id-display span {
+    margin-right: 0.5em;
+  }
+  

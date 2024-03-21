@@ -1,0 +1,81 @@
+/* Reset margins and paddings for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the main title */
+  h1 {
+    text-align: center;
+    padding: 1rem 0;
+    color: #34495e;
+    margin-bottom: 1rem; /* Space below the title */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Navigation bar styles */
+  nav {
+    display: flex;
+    justify-content: center; /* Centers the links */
+    background-color: #2c3e50;
+    padding: 1rem;
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  /* Navigation links styling */
+  nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover,
+  nav a:active {
+    color: #3498db; /* Light blue for interaction */
+  }
+  
+  /* Styling the router outlet to add space around the displayed components */
+  router-outlet {
+    padding: 1rem;
+    min-height: calc(100vh - 160px); /* Adjust height based on header/footer */
+  }
+  
+  /* Message component styling */
+  app-messages {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 300px;
+    background-color: rgba(52, 152, 219, 0.9); /* Semi-transparent blue */
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Make sure messages are on top */
+  }
+  
+  app-messages h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  app-messages .clear {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  app-messages .clear:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light highlight on hover */
+  }
+  

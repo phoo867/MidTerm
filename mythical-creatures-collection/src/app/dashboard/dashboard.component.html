@@ -1,0 +1,10 @@
+<h2>Top Mythical Creatures</h2>
+<div class="creatures-menu">
+  <a *ngFor="let creature of creatures"
+    routerLink="/detail/{{creature._id}}">
+    {{creature.name}}
+  </a>
+</div>
+
+
+<app-creature-search></app-creature-search>
